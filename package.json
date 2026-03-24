@@ -1,0 +1,39 @@
+{
+  "name": "the-coding-science",
+  "version": "1.0.0",
+  "description": "The Coding Science - An online learning platform for tech education (AI, Data Science, Web Development) targeting youth in Jammu and Kashmir",
+  "type": "module",
+  "main": "stitch/app.js",
+  "scripts": {
+    "dev": "http-server stitch -p 3000 -o",
+    "start": "http-server stitch -p 3000",
+    "build": "echo 'No build required - static files'",
+    "test": "echo 'Add tests using your preferred testing framework'",
+    "serve": "python -m http.server 8000 --directory stitch"
+  },
+  "keywords": [
+    "education",
+    "online-learning",
+    "technology",
+    "ai",
+    "data-science",
+    "web-development",
+    "youth",
+    "jammu-kashmir"
+  ],
+  "author": "The Coding Science Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "tailwindcss": "^3.3.0",
+    "prettier": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thecodingscienceapp/thecodingscienceapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thecodingscienceapp/thecodingscienceapp/issues"
+  },
+  "homepage": "https://thecodingscience.com"
+}

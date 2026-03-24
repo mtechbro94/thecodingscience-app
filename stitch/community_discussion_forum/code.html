@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Forum - The Coding Science</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6366f1", // Vibrant Indigo/Purple from screenshot
+                        secondary: "#4f46e5",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script src="../app.js" defer></script>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons text-xl">code</span>
+</div>
+<span class="font-bold text-lg tracking-tight">The Coding Science</span>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-icons">menu</span>
+</button>
+</header>
+<main class="pb-20">
+<!-- Page Header -->
+<section class="relative bg-gradient-to-b from-primary/20 via-background-light to-background-light dark:from-primary/10 dark:via-background-dark dark:to-background-dark px-6 py-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h1 class="text-2xl font-bold mb-1">Community Forum</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Connect, learn, and share with peers</p>
+</div>
+<span class="material-icons text-4xl text-primary opacity-20">forum</span>
+</div>
+<button class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/30 transition-all transform active:scale-95 flex items-center justify-center gap-2 mt-4">
+<span class="material-icons">add</span>
+<span>Start New Discussion</span>
+</button>
+</section>
+
+<!-- Forum Categories -->
+<section class="px-6 py-6">
+<h2 class="text-lg font-bold mb-4">Forum Categories</h2>
+<div class="space-y-3">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3 flex-grow">
+<div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-icons text-blue-600 dark:text-blue-400 text-xl">python</span>
+</div>
+<div>
+<h3 class="font-bold text-base">Python & Programming</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Learn and discuss Python, web dev, and coding</p>
+<div class="flex gap-2 mt-2">
+<span class="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">142 discussions</span>
+<span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">2.3k replies</span>
+</div>
+</div>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3 flex-grow">
+<div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-icons text-purple-600 dark:text-purple-400 text-xl">psychology</span>
+</div>
+<div>
+<h3 class="font-bold text-base">AI & Machine Learning</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">AI, deep learning, and data science topics</p>
+<div class="flex gap-2 mt-2">
+<span class="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 px-2 py-1 rounded">98 discussions</span>
+<span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">1.8k replies</span>
+</div>
+</div>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3 flex-grow">
+<div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-icons text-emerald-600 dark:text-emerald-400 text-xl">web</span>
+</div>
+<div>
+<h3 class="font-bold text-base">Web Development</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">HTML, CSS, JavaScript, React, and more</p>
+<div class="flex gap-2 mt-2">
+<span class="text-xs bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2 py-1 rounded">176 discussions</span>
+<span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">3.1k replies</span>
+</div>
+</div>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3 flex-grow">
+<div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-icons text-orange-600 dark:text-orange-400 text-xl">lightbulb</span>
+</div>
+<div>
+<h3 class="font-bold text-base">Career & Opportunities</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Job hunting, internships, and career advice</p>
+<div class="flex gap-2 mt-2">
+<span class="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-2 py-1 rounded">89 discussions</span>
+<span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">1.2k replies</span>
+</div>
+</div>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Search & Filters -->
+<section class="px-6 py-2">
+<div class="flex gap-2">
+<div class="flex-grow relative">
+<input type="text" placeholder="Search discussions..." class="w-full px-4 py-3 rounded-lg bg-card-light dark:bg-card-dark border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary text-sm"/>
+<span class="material-icons absolute right-3 top-3 text-slate-400">search</span>
+</div>
+<button class="bg-card-light dark:bg-card-dark border border-slate-200 dark:border-slate-700 p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons">tune</span>
+</button>
+</div>
+</section>
+
+<!-- Trending Discussions -->
+<section class="px-6 py-6 bg-slate-50 dark:bg-slate-900/50">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-lg font-bold">Trending This Week</h2>
+<a href="#" class="text-primary text-sm font-semibold">View All</a>
+</div>
+<div class="space-y-3">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+SA
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-sm">How to optimize Python DataFrame operations?</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">by Sarah Ahmed • Python & Programming</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex gap-3">
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">comment</span>
+<span>24 replies</span>
+</span>
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">favorite</span>
+<span>156 likes</span>
+</span>
+</div>
+<span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2 py-1 rounded">solved</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+RK
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-sm">Best practices for React component architecture</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">by Rajesh Kumar • Web Development</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex gap-3">
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">comment</span>
+<span>18 replies</span>
+</span>
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">favorite</span>
+<span>203 likes</span>
+</span>
+</div>
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">active</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+MP
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-sm">What's the difference between supervised and unsupervised learning?</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">by Manya Patel • AI & Machine Learning</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex gap-3">
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">comment</span>
+<span>31 replies</span>
+</span>
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">favorite</span>
+<span>289 likes</span>
+</span>
+</div>
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">active</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+VD
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-sm">Internship tips and success stories from our community</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">by Vikram Dev • Career & Opportunities</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex gap-3">
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">comment</span>
+<span>42 replies</span>
+</span>
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">favorite</span>
+<span>521 likes</span>
+</span>
+</div>
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded">trending</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Recent Discussions -->
+<section class="px-6 py-6">
+<h2 class="text-lg font-bold mb-4">Recent Discussions</h2>
+<div class="space-y-3">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+<div class="flex items-start gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+NJ
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-sm">CSS Grid vs Flexbox - when to use what?</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">by Neha Joshi • Web Development</p>
+</div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 p-2 bg-slate-50 dark:bg-slate-900/30 rounded mb-2">
+I'm starting to learn CSS and I'm confused about when to use CSS Grid versus Flexbox. Can someone explain the differences...
+</p>
+<div class="flex items-center justify-between text-xs">
+<div class="flex gap-3">
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">comment</span>
+<span>12 replies</span>
+</span>
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">visibility</span>
+<span>156 views</span>
+</span>
+</div>
+<span class="text-xs text-slate-400">2 hours ago</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+<div class="flex items-start gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+AD
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-sm">Anyone doing an internship? Let's share experiences!</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">by Arjun Desai • Career & Opportunities</p>
+</div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 p-2 bg-slate-50 dark:bg-slate-900/30 rounded mb-2">
+I'm currently interning at a tech startup and have learned so much. Would love to hear about your internship experiences...
+</p>
+<div class="flex items-center justify-between text-xs">
+<div class="flex gap-3">
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">comment</span>
+<span>8 replies</span>
+</span>
+<span class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-icons text-sm">visibility</span>
+<span>94 views</span>
+</span>
+</div>
+<span class="text-xs text-slate-400">4 hours ago</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Community Resources -->
+<section class="px-6 py-6 bg-slate-50 dark:bg-slate-900/50">
+<h2 class="text-lg font-bold mb-4">Community Resources</h2>
+<div class="grid grid-cols-1 gap-3">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-3">
+<span class="material-icons text-primary text-2xl">book</span>
+<div>
+<h3 class="font-bold text-sm">Learning Guides</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Curated study materials and tutorials</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-3">
+<span class="material-icons text-primary text-2xl">people</span>
+<div>
+<h3 class="font-bold text-sm">Study Groups</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Join online study groups with peers</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-3">
+<span class="material-icons text-primary text-2xl">code</span>
+<div>
+<h3 class="font-bold text-sm">Code Snippets</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Share and find useful code examples</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-900 dark:bg-black text-white py-8 px-6 text-center text-sm text-slate-400">
+<p>© 2024 The Coding Science. All rights reserved.</p>
+</footer>
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 py-3 flex justify-around items-center">
+<a href="/the_coding_science_home/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a href="/browse_courses/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">school</span>
+<span class="text-xs font-medium">Courses</span>
+</a>
+<a href="/student_profile_dashboard/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+<a href="/community_discussion_forum/code.html" class="flex flex-col items-center gap-1 text-primary transition-colors">
+<span class="material-icons">forum</span>
+<span class="text-xs font-medium">Forum</span>
+</a>
+</nav>
+</body>
+</html>

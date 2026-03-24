@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Live Training Sessions - The Coding Science</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script src="../app.js" defer></script>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-primary/10">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<h1 class="text-primary text-xs font-bold uppercase tracking-widest">The Coding Science</h1>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Live Training</h2>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-full size-10 bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<div class="flex flex-wrap items-center justify-center gap-6 p-4">
+<div class="flex w-full max-w-[400px] flex-col gap-2 bg-primary/5 rounded-xl p-4 border border-primary/10">
+<div class="flex items-center justify-between mb-2">
+<button class="text-primary hover:bg-primary/20 p-1 rounded-full">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">October 2023</p>
+<button class="text-primary hover:bg-primary/20 p-1 rounded-full">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase py-2">S</p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase py-2">M</p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase py-2">T</p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase py-2">W</p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase py-2">T</p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase py-2">F</p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase py-2">S</p>
+<button class="h-10 w-full flex items-center justify-center text-sm">29</button>
+<button class="h-10 w-full flex items-center justify-center text-sm">30</button>
+<button class="h-10 w-full flex items-center justify-center text-sm">31</button>
+<button class="h-10 w-full flex items-center justify-center text-sm font-medium">1</button>
+<button class="h-10 w-full flex items-center justify-center text-sm font-medium">2</button>
+<button class="h-10 w-full flex items-center justify-center text-sm font-medium">3</button>
+<button class="h-10 w-full flex items-center justify-center text-sm font-medium">4</button>
+<button class="h-10 w-full flex items-center justify-center">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white font-bold shadow-lg shadow-primary/30">5</div>
+</button>
+<button class="h-10 w-full flex items-center justify-center text-sm font-medium">6</button>
+<button class="h-10 w-full flex items-center justify-center text-sm font-medium">7</button>
+<button class="h-10 w-full flex items-center justify-center text-sm font-medium">8</button>
+</div>
+</div>
+</div>
+<div class="flex gap-3 px-4 overflow-x-auto pb-2 no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-sm">
+<p class="text-white text-sm font-semibold">All Sessions</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-primary/10 px-5 border border-primary/5">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">AI &amp; ML</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-primary/10 px-5 border border-primary/5">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Web Dev</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-primary/10 px-5 border border-primary/5">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Python</p>
+</button>
+</div>
+<section class="px-4 mt-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Today's Schedule</h3>
+<span class="text-primary text-xs font-semibold">2 Sessions</span>
+</div>
+<div class="space-y-4">
+<div class="bg-white dark:bg-slate-800/40 rounded-xl p-4 border border-primary/10 shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-3">
+<span class="flex items-center gap-1 bg-green-500/10 text-green-500 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider animate-pulse">
+<span class="size-1.5 rounded-full bg-green-500"></span> Live Now
+                            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+</div>
+<div class="flex-1">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold text-base">AI with Python: Neural Networks</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5">Learn to build your first MLP from scratch with PyTorch.</p>
+<div class="flex items-center gap-3 mt-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Dr. Sarah Chen</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">10:30 AM</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 bg-primary text-white font-bold py-3 rounded-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                            Join Now <span class="material-symbols-outlined text-[18px]">play_circle</span>
+</button>
+</div>
+<div class="bg-white dark:bg-slate-800/40 rounded-xl p-4 border border-primary/10 shadow-sm relative">
+<div class="flex items-start gap-4">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+</div>
+<div class="flex-1">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold text-base">Data Analysis Workshop</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5">Advanced Pandas techniques for large scale data manipulation.</p>
+<div class="flex items-center gap-3 mt-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Prof. James Miller</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">02:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 bg-primary/10 dark:bg-primary/20 text-primary font-bold py-3 rounded-lg border border-primary/20 flex items-center justify-center gap-2">
+                            Notify Me <span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</button>
+</div>
+<div class="bg-white dark:bg-slate-800/40 rounded-xl p-4 border border-primary/10 shadow-sm relative opacity-80">
+<div class="flex items-start gap-4">
+<div class="size-14 rounded-lg bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-400 text-3xl">code</span>
+</div>
+<div class="flex-1">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold text-base">Next.js 14 Deep Dive</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5">Master Server Components and Server Actions.</p>
+<div class="flex items-center gap-3 mt-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Alex Rivera</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Tomorrow, 09:00 AM</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 bg-slate-100 dark:bg-slate-700/50 text-slate-500 dark:text-slate-300 font-bold py-3 rounded-lg flex items-center justify-center gap-2">
+                            Scheduled <span class="material-symbols-outlined text-[18px]">event_available</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 flex border-t border-primary/10 bg-background-light dark:bg-background-dark/95 backdrop-blur-xl px-4 pb-6 pt-2 z-20">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">video_camera_front</span>
+<p class="text-[10px] font-semibold leading-normal">Live</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<p class="text-[10px] font-medium leading-normal">Courses</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<p class="text-[10px] font-medium leading-normal">Profile</p>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Profile - The Coding Science</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6366f1", // Vibrant Indigo/Purple from screenshot
+                        secondary: "#4f46e5",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script src="../app.js" defer></script>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons text-xl">code</span>
+</div>
+<span class="font-bold text-lg tracking-tight">The Coding Science</span>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-icons">menu</span>
+</button>
+</header>
+<main class="pb-20">
+<!-- Profile Header -->
+<section class="relative bg-gradient-to-b from-primary/20 via-background-light to-background-light dark:from-primary/10 dark:via-background-dark dark:to-background-dark px-6 py-8">
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white mb-4">
+<span class="material-icons text-5xl">person</span>
+</div>
+<h1 class="text-2xl font-bold mb-1">Alex Johnson</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4">alex.johnson@techmail.com</p>
+<div class="inline-block bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold">
+Active Member • 365 days
+</div>
+</div>
+</section>
+
+<!-- Stats Overview -->
+<section class="px-6 py-6">
+<div class="grid grid-cols-3 gap-4 mb-6">
+<div class="bg-card-light dark:bg-card-dark rounded-2xl p-4 text-center shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="text-2xl font-bold text-primary mb-1">8</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Courses Enrolled</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-2xl p-4 text-center shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="text-2xl font-bold text-emerald-500 mb-1">3</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Completed</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-2xl p-4 text-center shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="text-2xl font-bold text-blue-500 mb-1">6</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">Certifications</p>
+</div>
+</div>
+
+<!-- Learning Stats -->
+<div class="bg-card-light dark:bg-card-dark rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800">
+<h3 class="font-bold text-lg mb-4">Learning Streak</h3>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-sm font-medium">Current Streak</span>
+<span class="text-primary font-bold">45 days</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full w-3/4 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-sm font-medium">Total Learning Hours</span>
+<span class="text-primary font-bold">124 hrs</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full w-4/5 bg-emerald-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Active Courses -->
+<section class="px-6 py-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-xl font-bold">Active Courses (5)</h2>
+<a href="#" class="text-primary font-semibold text-sm">View All</a>
+</div>
+<div class="space-y-4">
+<div class="bg-card-light dark:bg-card-dark rounded-2xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-start gap-4 mb-3">
+<div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-icons text-blue-600 dark:text-blue-400">computer</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-base">Python for Data Science</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Intermediate</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-medium">Progress</span>
+<span class="text-primary font-bold">65%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-2xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-start gap-4 mb-3">
+<div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-icons text-purple-600 dark:text-purple-400">palette</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-base">Web Development Bootcamp</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Beginner</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-medium">Progress</span>
+<span class="text-primary font-bold">42%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full w-2/5 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-2xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-start gap-4 mb-3">
+<div class="w-16 h-16 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+<span class="material-icons text-amber-600 dark:text-amber-400">grade</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-bold text-base">Machine Learning Basics</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Advanced</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-medium">Progress</span>
+<span class="text-primary font-bold">28%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full w-1/3 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Certificates -->
+<section class="px-6 py-6 bg-slate-50 dark:bg-slate-900/50">
+<h2 class="text-xl font-bold mb-4">Recent Certificates (6)</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+<span class="material-icons text-4xl text-primary">verified</span>
+</div>
+<div class="p-3">
+<p class="font-semibold text-sm truncate">Python Basics</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Jan 2024</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="aspect-square bg-gradient-to-br from-emerald-200/20 to-teal-200/20 flex items-center justify-center">
+<span class="material-icons text-4xl text-emerald-500">verified</span>
+</div>
+<div class="p-3">
+<p class="font-semibold text-sm truncate">HTML & CSS</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Feb 2024</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="aspect-square bg-gradient-to-br from-blue-200/20 to-cyan-200/20 flex items-center justify-center">
+<span class="material-icons text-4xl text-blue-500">verified</span>
+</div>
+<div class="p-3">
+<p class="font-semibold text-sm truncate">JavaScript</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Mar 2024</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow cursor-pointer">
+<div class="aspect-square bg-gradient-to-br from-pink-200/20 to-orange-200/20 flex items-center justify-center">
+<span class="material-icons text-4xl text-pink-500">verified</span>
+</div>
+<div class="p-3">
+<p class="font-semibold text-sm truncate">React Basics</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Apr 2024</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Settings and Profile Actions -->
+<section class="px-6 py-6">
+<h2 class="text-xl font-bold mb-4">Account Settings</h2>
+<div class="space-y-3">
+<button class="w-full bg-card-light dark:bg-card-dark rounded-xl px-4 py-3 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-600 dark:text-slate-400">person</span>
+<span class="font-medium">Edit Profile</span>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</button>
+<button class="w-full bg-card-light dark:bg-card-dark rounded-xl px-4 py-3 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-600 dark:text-slate-400">security</span>
+<span class="font-medium">Security & Privacy</span>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</button>
+<button class="w-full bg-card-light dark:bg-card-dark rounded-xl px-4 py-3 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-600 dark:text-slate-400">notifications</span>
+<span class="font-medium">Notifications</span>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</button>
+<button class="w-full bg-card-light dark:bg-card-dark rounded-xl px-4 py-3 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-600 dark:text-slate-400">help</span>
+<span class="font-medium">Help & Support</span>
+</div>
+<span class="material-icons text-slate-400">chevron_right</span>
+</button>
+<button class="w-full bg-red-50 dark:bg-red-900/20 rounded-xl px-4 py-3 flex items-center justify-between hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400">
+<div class="flex items-center gap-3">
+<span class="material-icons">logout</span>
+<span class="font-medium">Logout</span>
+</div>
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<footer class="bg-slate-900 dark:bg-black text-white py-8 px-6 text-center text-sm text-slate-400">
+<p>© 2024 The Coding Science. All rights reserved.</p>
+</footer>
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 py-3 flex justify-around items-center">
+<a href="/the_coding_science_home/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a href="/browse_courses/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">school</span>
+<span class="text-xs font-medium">Courses</span>
+</a>
+<a href="/student_profile_dashboard/code.html" class="flex flex-col items-center gap-1 text-primary transition-colors">
+<span class="material-icons">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+<a href="/community_discussion_forum/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">forum</span>
+<span class="text-xs font-medium">Forum</span>
+</a>
+</nav>
+</body>
+</html>

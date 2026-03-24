@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Browse Courses - The Coding Science</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366f1",
+              "background-light": "#f8fafc",
+              "background-dark": "#0f172a",
+              "card-light": "#ffffff",
+              "card-dark": "#1e293b",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .ios-blur { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script src="../app.js" defer></script>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur border-b border-slate-200 dark:border-slate-800 px-4 pt-12 pb-4">
+<div class="flex items-center justify-between mb-4">
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Browse Courses</h1>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-slate-600 dark:text-slate-400">shopping_cart</span>
+</button>
+</div>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-slate-100 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-primary text-sm" placeholder="Search for AI, Web Dev, Python..." type="text"/>
+</div>
+<div class="flex gap-2 mt-4 overflow-x-auto no-scrollbar pb-2">
+<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-medium whitespace-nowrap">All</button>
+<button class="px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium whitespace-nowrap hover:bg-slate-200 dark:hover:bg-slate-700">Beginner</button>
+<button class="px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium whitespace-nowrap hover:bg-slate-200 dark:hover:bg-slate-700">Intermediate</button>
+<button class="px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium whitespace-nowrap hover:bg-slate-200 dark:hover:bg-slate-700">Advanced</button>
+</div>
+</header>
+<main class="p-4 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-semibold dark:text-white">Featured Courses</h2>
+<button class="text-primary text-sm font-medium">See All</button>
+</div>
+<div class="grid gap-6">
+<div class="bg-card-light dark:bg-card-dark rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-[0.98]">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Full Stack Web Development Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Qz9RQc3jlgYgMue13Q_TyDA44-Xk7f8HByspQAzZ9CGXpatlaDB4g9O8YMc3o9sUxzeo3waQ9Z_P-h6fiEOCGWrt5RB3n0MvVynB8zZT2M-3oj7XV2Iph2ZxhyW8CsgKO_up1hm8tQdcDnLIjewyGHXgKl0LgDroD_kk3Sie-V2Bd7hvrvDHhLOgIKv_TGq1D11Nk0Tvl_ECWZX4SDVT6g-BOYtJEp_0VCCzOI1h6VvmPzw3A9YJeKmVdhvUyrsx87uDY_Weu7A"/>
+<div class="absolute top-3 left-3 bg-cyan-500 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">
+                        Intermediate
+                    </div>
+</div>
+<div class="p-5">
+<h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Full Stack Web Development</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2 mb-4">Master modern web technologies from frontend to backend with hands-on projects and industry standards.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 dark:text-slate-500 line-through">₹ 7,999</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">₹ 4,999</span>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity">
+                            View Course
+                        </button>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-[0.98]">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Data Science Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwaMSDwWOwOnfREThYPIfw_xow5bZO3XcdIh43sD_HBQYK44eATNmznMgxTeRznp8Hd8zgPBui3PmENLiuQfTl4O7YkGVVGULNfEwR8wlhbDXABeWK82PgVNIxSZUO1cjxa1mOT7i_5fmEkqW5rra5-F2ZP5hIuvPBX16cKdXbnOjdDsCD1ALcrV7SSrEb5a40oeYP5FEBYb87jZ0OcRtnJ49JNOnywWX5y5dTPqBu4qUI5OqqULtMaG50NBJEwS_KUaC2Rigqo-M"/>
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">
+                        Beginner to Pro
+                    </div>
+</div>
+<div class="p-5">
+<h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Data Science from Scratch</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2 mb-4">Learn Python, Statistics, and Machine Learning. Transition your career into the world of Data Science.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 dark:text-slate-500 line-through">₹ 9,999</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">₹ 5,999</span>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity">
+                            View Course
+                        </button>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-[0.98]">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Python Programming Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChSPwfQLlm9qO15XXWVQyHr-1ZulbJ3enL98aqqva8M4Q5Ne5VR606HXU2Efv2pm4pLGVlUsXa2JFYPxSLvqmjYAcQ9waxX6z2hG0PNhArr1sunvINfwdXs0ZJeKSJ5KsV-UxrKZz6jTgez3CLXvioR_FztoQAE_bkSpZ_Jb53i3WerdqLuCRG-1Ik-067_je_oV__ZUbcO6tjVIx19qIrRVqxib44VhU8T6oS7hPZcPvxd-cx4_9e5Ni7qKv7QToDihYQCMm2G5s"/>
+<div class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">
+                        Beginner
+                    </div>
+</div>
+<div class="p-5">
+<h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Programming with Python</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2 mb-4">Start your coding journey with the most popular language. Perfect for absolute beginners.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 dark:text-slate-500 line-through">₹ 3,999</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">₹ 1,999</span>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity">
+                            View Course
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="py-8 flex justify-center">
+<button class="border-2 border-primary text-primary px-8 py-3 rounded-2xl font-bold text-sm hover:bg-primary hover:text-white transition-all">
+                Explore All Courses
+            </button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light/95 dark:bg-background-dark/95 ios-blur border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">menu_book</span>
+<span class="text-[10px] font-medium">Courses</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-icons">cast_for_education</span>
+<span class="text-[10px] font-medium">Live</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-icons">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+<div class="h-20"></div>
+<script>
+        // Check for system theme preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        // Listen for theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+</body></html>

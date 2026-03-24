@@ -1,0 +1,142 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                        "success": "#22c55e",
+                        "error": "#ef4444",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .radio-dot {
+            --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script src="../app.js" defer></script>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col items-center">
+<div class="relative flex h-full min-h-screen w-full max-w-[430px] flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-primary/10">
+<button class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<div class="flex flex-col items-center flex-1">
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Python Basics</h2>
+<p class="text-xs text-slate-500 dark:text-primary/60 font-medium">The Coding Science</p>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 bg-transparent text-slate-900 dark:text-slate-100 p-0">
+<span class="material-symbols-outlined text-[24px]">help</span>
+</button>
+</div>
+</header>
+<div class="flex flex-col gap-3 p-6">
+<div class="flex gap-6 justify-between items-end">
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">Overall Progress</p>
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-normal">Module 1: Foundations</p>
+</div>
+<p class="text-primary text-sm font-bold leading-normal">10% Complete</p>
+</div>
+<div class="h-2.5 w-full rounded-full bg-primary/10 dark:bg-primary/20 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 10%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Question 1 of 10</p>
+<div class="flex gap-1">
+<div class="h-1.5 w-4 rounded-full bg-primary"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20"></div>
+</div>
+</div>
+</div>
+<main class="flex-1">
+<div class="px-6 py-4">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-6 border border-primary/10">
+<h3 class="text-slate-900 dark:text-slate-100 tracking-tight text-xl font-bold leading-snug">
+                        Which of the following best describes the primary purpose of a <code class="bg-primary/20 px-1.5 py-0.5 rounded text-primary">for</code> loop in Python programming?
+                    </h3>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-6 pt-2 radio-dot">
+<label class="flex items-center gap-4 rounded-xl border-2 border-solid border-primary/10 dark:border-primary/20 p-4 transition-all hover:bg-primary/5 cursor-pointer">
+<input class="h-6 w-6 border-2 border-primary/30 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="quiz-option" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-normal">To define a new reusable function</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Encapsulating logic for modularity</p>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border-2 border-solid border-success/50 bg-success/5 p-4 transition-all cursor-pointer">
+<input checked="" class="h-6 w-6 border-2 border-success bg-success text-transparent checked:border-success checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="quiz-option" type="radio"/>
+<div class="flex grow flex-col">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-normal">To iterate over a sequence of elements</p>
+<span class="material-symbols-outlined text-success text-sm font-bold">check_circle</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Used with lists, tuples, or strings</p>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border-2 border-solid border-primary/10 dark:border-primary/20 p-4 transition-all hover:bg-primary/5 cursor-pointer">
+<input class="h-6 w-6 border-2 border-primary/30 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="quiz-option" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-normal">To import external libraries and modules</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Expanding Python's base functionality</p>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border-2 border-solid border-error/30 bg-error/5 p-4 transition-all cursor-pointer">
+<input class="h-6 w-6 border-2 border-error/50 bg-transparent text-transparent focus:outline-none focus:ring-0 focus:ring-offset-0" name="quiz-option" type="radio"/>
+<div class="flex grow flex-col">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-normal">To handle runtime errors and exceptions</p>
+<span class="material-symbols-outlined text-error text-sm font-bold">cancel</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Utilizing try/except block patterns</p>
+</div>
+</label>
+</div>
+</main>
+<footer class="p-6 bg-background-light dark:bg-background-dark border-t border-primary/10">
+<div class="flex gap-4">
+<button class="flex min-w-[56px] items-center justify-center rounded-xl h-14 bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="flex flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/25">
+<span class="truncate">Continue</span>
+<span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</button>
+</div>
+<div class="mt-4 flex justify-center">
+<div class="h-1 w-32 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</footer>
+</div>
+
+```</body></html>
