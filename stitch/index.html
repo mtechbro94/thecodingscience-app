@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Coding Science - Mobile App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6366f1", // Vibrant Indigo/Purple from screenshot
+                        secondary: "#4f46e5",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script src="./app.js" defer></script>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons text-xl">code</span>
+</div>
+<span class="font-bold text-lg tracking-tight">The Coding Science</span>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-icons">menu</span>
+</button>
+</header>
+<main class="pb-20">
+<section class="relative h-[480px] flex flex-col items-center justify-center px-6 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Abstract technology background" class="w-full h-full object-cover opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJi7hsipVW1ob0PYyyzDVXIvy6JOHAJConyNFhaX3MTFIBjPPtgERL4FpBZY858wEUc4jG46BlMHFIFurdMfIZSxIXI-twnWjr71oQu26VQFs6sbp2_YZ4uIKLAisx7Hqm-EetD4q9evKhKWePfvAmetziYB5nAZkKCDikZh9HrJqkV1zdBAok84Un2Mqx3gz7uPyM3BWH7fdSsHj5o5AQpqjtLNwga37M1p35oJPj5K77rVCo66_kuZ0elmvgwHmRqfYo-YU34N4"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/10 via-background-light to-background-light dark:from-primary/20 dark:via-background-dark dark:to-background-dark"></div>
+</div>
+<div class="relative z-10 text-center max-w-md">
+<h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+                    School of Technology and <span class="text-primary">AI Innovations</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg mb-8">
+                    Empowering the Youth of Jammu and Kashmir to lead the world in AI, Data Science and Emerging Technologies.
+                </p>
+<button class="bg-primary hover:bg-secondary text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-primary/30 transition-all transform active:scale-95">
+                    Start Learning Now
+                </button>
+</div>
+</section>
+<section class="px-6 py-12">
+<div class="text-center mb-10">
+<h2 class="text-2xl font-bold mb-2">Bridge the gap between academia &amp; industry</h2>
+<div class="h-1 w-16 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-4">
+<div class="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl">
+<span class="material-icons">school</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Our Vision</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">To empower individuals with cutting-edge technology skills and nurture the next generation of innovation leaders.</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-4">
+<div class="p-3 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-xl">
+<span class="material-icons">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">Our Mission</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Deliver comprehensive, industry-aligned training that transforms careers and creates opportunities in the tech industry.</p>
+</div>
+</div></div>
+</section>
+<section class="px-6 py-12 bg-slate-50 dark:bg-slate-900/50">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-2xl font-bold">Featured Courses</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Most popular programs for you</p>
+</div>
+<a class="text-primary font-semibold text-sm" href="./browse_courses/code.html">View All</a>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-4 hide-scrollbar -mx-6 px-6">
+<div class="min-w-[280px] max-w-[280px] bg-card-light dark:bg-card-dark rounded-2xl overflow-hidden shadow-md border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="relative h-40">
+<img alt="Computer Science" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVh-aIRLwoTDBV5N_0vEG8v4B89dWAT6WVDFOKejFn17KbweaxcDUaAJbPigD5pNiejHxwRFRXJ0YrcblC5dq5Cz-RJM7BTRYegOlTCXAIIKyZ964-yoyvnBFdP0j0VnDtDf9JKofu9CJy1Zy9pOPWDXs3q-M_fYmv4fIZO3WR0daiXSF42mNJvRr0jklKVgKdPKtdg-oaDiYw6hyYIyfAERByutu6-WzUG7nlGz_7otOJSUZdWr0Rb7sosQw37t5yAO7K0ms7v5Q"/>
+<span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">BEGINNER</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg leading-tight mb-2">Crash Course in Computer Science</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Foundation course for technology beginners</p>
+<div class="mt-auto">
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-bold">₹ 7,999</span>
+<div class="flex items-center text-slate-400 text-xs">
+<span class="material-icons text-xs text-yellow-500 mr-1">star</span>
+<span>4.9 (120+)</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2.5 rounded-xl font-bold text-sm transition-colors hover:bg-secondary">View Course</button>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] max-w-[280px] bg-card-light dark:bg-card-dark rounded-2xl overflow-hidden shadow-md border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="relative h-40">
+<img alt="Python Programming" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqc0QrS5U_tP2TJZB6kidKerx5Ka5SaLG96XPGS-BuG0PWofUCKvIMUnQD8OkvLsAfJUyHflBM2aW0xUnF169suSlG3vrS7C7IHGoZzTDE3avsTSPviw6qo1BfGjuVWmKnNzbhnq6u2VKGicOswthlsOW3bbd2N23L8dyRQCFXdi-9_fxo85MB1I4buvcya2SedBXwTQZjbyRLmw_6OblAPOvif0_1M3N4L323g73yZMkW1xbxB5ENYIn-QnvDYV6-wfYyh1Xykrk"/>
+<span class="absolute top-3 left-3 bg-teal-500 text-white text-[10px] font-bold px-2 py-1 rounded">INTERMEDIATE</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg leading-tight mb-2">Programming with Python</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Learn Python programming from scratch to advanced</p>
+<div class="mt-auto">
+<div class="flex items-center justify-between mb-4">
+<span class="text-primary font-bold">₹ 12,499</span>
+<div class="flex items-center text-slate-400 text-xs">
+<span class="material-icons text-xs text-yellow-500 mr-1">star</span>
+<span>4.8 (85+)</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2.5 rounded-xl font-bold text-sm transition-colors hover:bg-secondary">View Course</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 py-12">
+<h2 class="text-2xl font-bold mb-8 text-center">Why Choose The Coding Science?</h2>
+<div class="space-y-4">
+<div class="p-5 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 mb-2">
+<div class="p-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 rounded-lg">
+<span class="material-icons">groups</span>
+</div>
+<h4 class="font-bold">Industry Expert Trainers</h4>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm pl-12">Learn from experienced professionals with 10+ years in the tech industry.</p>
+</div>
+<div class="p-5 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 mb-2">
+<div class="p-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-lg">
+<span class="material-icons">code</span>
+</div>
+<h4 class="font-bold">Hands-On Projects</h4>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm pl-12">Build real-world applications from day one. Portfolio-ready projects.</p>
+</div>
+<div class="p-5 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 mb-2">
+<div class="p-2 bg-orange-100 dark:bg-orange-900/30 text-orange-600 rounded-lg">
+<span class="material-icons">business</span>
+</div>
+<h4 class="font-bold">Tie ups with MNCs</h4>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm pl-12">We have partnerships with leading multinational companies for internships.</p>
+</div>
+</div>
+</section>
+<section class="px-6 py-12 bg-slate-50 dark:bg-slate-900/50">
+<h2 class="text-2xl font-bold mb-8">Latest from Our Blog</h2>
+<div class="space-y-8">
+<div class="flex flex-col gap-4">
+<img alt="Kubernetes blog" class="w-full h-48 object-cover rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMt4RY9V4FLV6kX8N1N_yVUG9P8aVCql8aKJ7lFS1K5eQS4ykZ4OfCFYCTPck6Q885U5HWJLNL8yIEuylMePbqeH0k3_vKOqy4HA2gIwce-wvsyg7PEobL2SoZo0zmegsRZnkMZCZ2_L7a84OPMEyKnM9nH645jsQPe289z08DVKQMltUbIydOBJC1JyxOPwBqq7ylhNj63lXHJnt1_3fGhBk1f1TzRFQQkEDebNOfO6rFuWLOHT-PwFXqAUrAPQaaAXjDz3iUXCI"/>
+<div>
+<div class="flex items-center gap-3 text-xs text-slate-400 mb-2">
+<span class="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 px-2 py-1 rounded-md font-medium uppercase">Technology</span>
+<span>Feb 27, 2024</span>
+</div>
+<h3 class="font-bold text-lg mb-2">Kubernetes Architecture Demystified : Pods, Nodes, Clusters</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">An open-source platform that automates the deployment, scaling, and management of containerized apps...</p>
+<a class="inline-block mt-3 text-primary font-bold text-sm" href="#">Read More →</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<img alt="AI race blog" class="w-full h-48 object-cover rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV9M6fAnDiPkHWcgcZgSRWaLUbpjKueZ3Y5lZrSRKsnW3Ii53razxG-iJ3XDkUagaS_j4cd9fRjVZfxGCpCt09Udm_a4J0az_6YxkcLaPpdbBMQiwNBU3vP-YBUjNyUuQqg3K2SBbBA8WyxVF0v742YFVMv9wcpSnkb4xrx8glWF30zUkVPUKEsfQvdvkl0blFzV0yNSZbf_6tEHdCq3UQb_iPDID1L8DIzBaEkt6cFb4vsxwrinMNmrDbpCyoXx96Ro1G_pTF-8A"/>
+<div>
+<div class="flex items-center gap-3 text-xs text-slate-400 mb-2">
+<span class="bg-pink-50 dark:bg-pink-900/20 text-pink-600 px-2 py-1 rounded-md font-medium uppercase">Trends</span>
+<span>Feb 25, 2024</span>
+</div>
+<h3 class="font-bold text-lg mb-2">The AI Race Just Got Real: Why 2024 is the Most Exciting Year</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">If you still think AI is just about chatbots writing captions, you're missing the bigger picture of...</p>
+<a class="inline-block mt-3 text-primary font-bold text-sm" href="#">Read More →</a>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 border-2 border-primary text-primary py-3 rounded-2xl font-bold transition-all hover:bg-primary/10">View All Articles</button>
+</section>
+<section class="px-6 py-12">
+<h2 class="text-2xl font-bold mb-8 text-center">Student Success Stories</h2>
+<div class="flex overflow-x-auto gap-4 hide-scrollbar -mx-6 px-6">
+<div class="min-w-[300px] p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-icons text-primary/40 text-4xl mb-4">format_quote</span>
+<p class="text-slate-600 dark:text-slate-400 italic mb-6">"The Coding Science helped me switch from a non-tech background to a full-time web developer in just a few months."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-500">AK</div>
+<div>
+<h4 class="font-bold text-sm">Ayesha Khan</h4>
+<p class="text-slate-400 text-[10px]">Front-end Developer, Bangalore</p>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-icons text-primary/40 text-4xl mb-4">format_quote</span>
+<p class="text-slate-600 dark:text-slate-400 italic mb-6">"Live classes, doubt support and career guidance made the learning journey smooth and focused."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-500">SG</div>
+<div>
+<h4 class="font-bold text-sm">Simran Gupta</h4>
+<p class="text-slate-400 text-[10px]">AI &amp; ML Enthusiast, Jammu</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 py-12 mx-6 my-12 bg-primary rounded-3xl text-white text-center shadow-xl shadow-primary/20">
+<h2 class="text-3xl font-extrabold mb-4 leading-tight">Ready to Transform Your Career?</h2>
+<p class="text-white/80 mb-8 px-4">Join thousands of students who have successfully launched their tech careers.</p>
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold shadow-md hover:bg-slate-50 transition-colors">Get in Touch Today</button>
+</section>
+</main>
+<footer class="bg-slate-900 text-white px-6 pt-12 pb-8">
+<div class="flex flex-col gap-8">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons text-xl">code</span>
+</div>
+<span class="font-bold text-lg tracking-tight">The Coding Science</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">The Coding Science is a technology startup focused on online education, trainings, and internships designed to bridge the gap between academia and industry.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-primary">What We Offer</h4>
+<ul class="text-slate-400 text-sm space-y-2">
+<li>Online Learning</li>
+<li>Regional Languages</li>
+<li>Industry Skills</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-primary">Quick Links</h4>
+<ul class="text-slate-400 text-sm space-y-2">
+<li>Home</li>
+<li>Courses</li>
+<li>Internships</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8 mt-4">
+<div class="flex flex-col gap-4 text-slate-400 text-sm">
+<div class="flex items-center gap-3">
+<span class="material-icons text-primary text-lg">mail</span>
+<span>academy@thecodingscience.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-icons text-primary text-lg">call</span>
+<span>+91 7006136621</span>
+</div>
+</div>
+</div>
+<p class="text-slate-500 text-[10px] text-center mt-8">© 2024 The Coding Science. All rights reserved.</p>
+</div>
+</footer>
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 py-3 flex justify-around items-center">
+<a href="./index.html" class="flex flex-col items-center gap-1 text-primary transition-colors">
+<span class="material-icons">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a href="./browse_courses/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">school</span>
+<span class="text-xs font-medium">Courses</span></a>
+<a href="./live_training_sessions/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">videocam</span>
+<span class="text-xs font-medium">Live</span></a>
+<a href="./course_certificate_view/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">assignment</span>
+<span class="text-xs font-medium">Certificates</span></a>
+<a href="./student_profile_dashboard/code.html" class="flex flex-col items-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+
+</body></html>

@@ -1,0 +1,59 @@
+# Netlify Configuration for The Coding Science App
+# Auto-deployment and build settings
+
+[build]
+# Static site - no build command needed
+command = ""
+# Publish directory - location of index.html and assets
+publish = "stitch/"
+
+[[redirects]]
+# SPA routing - redirect all non-file requests to index.html
+from = "/*"
+to = "index.html"
+status = 200
+
+# Headers configuration
+[[headers]]
+for = "/*"
+[headers.values]
+# Cache static assets for 1 year
+Cache-Control = "public, max-age=31536000, immutable"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "SAMEORIGIN"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+for = "/stitch/*.html"
+[headers.values]
+# Don't cache HTML files - check for updates on every request
+Cache-Control = "public, max-age=0, must-revalidate"
+Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+for = "/stitch/app.js"
+[headers.values]
+Cache-Control = "public, max-age=604800, must-revalidate"
+Content-Type = "application/javascript; charset=utf-8"
+
+# Error page handling
+[[redirects]]
+from = "/404"
+to = "/404.html"
+status = 404
+
+# Performance settings
+[build.environment]
+NODE_VERSION = "18.0.0"
+
+# Netlify Functions (if needed in future)
+[functions]
+directory = "netlify/functions"
+node_bundler = "esbuild"
+
+# Forms (if implementing contact forms)
+[dev]
+publish = "stitch/"
+framework = "#static"

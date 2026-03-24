@@ -287,14 +287,66 @@ Update the Google Fonts link in each HTML file's `<head>`:
 
 ## 🚢 Deployment
 
-### Deployment Options
+### Netlify Deployment (Recommended)
 
-#### **1. Netlify** (Recommended)
+#### Option A: Deploy via Netlify UI
+1. Go to [Netlify](https://app.netlify.com)
+2. Click "Add new site" → "Import an existing project"
+3. Connect your GitHub repository (`mtechbro94/thecodingscience-app`)
+4. Configure build settings:
+   - **Build command**: (leave empty - static site)
+   - **Publish directory**: `stitch`
+5. Click "Deploy site"
+
+#### Option B: Deploy via Netlify CLI
 ```bash
-# Connect GitHub repository and deploy
-# Automatic previews on pull requests
-# Free SSL, CDN, and custom domain support
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Login to Netlify
+netlify login
+
+# Initialize site (first time only)
+netlify init
+
+# Deploy to production
+netlify deploy --prod --dir=stitch
 ```
+
+#### Option C: Automatic Deploy via GitHub Actions
+The project includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically deploys on push to `main` branch.
+
+1. Add secrets to your GitHub repository:
+   - Go to Repository Settings → Secrets → Actions
+   - Add `NETLIFY_AUTH_TOKEN` (from Netlify CLI: `netlify addons:auth`)
+   - Add `NETLIFY_SITE_ID` (from Netlify site settings)
+
+2. Push to main branch:
+```bash
+git add .
+git commit -m "Deploy to Netlify"
+git push origin main
+```
+
+The workflow will automatically:
+- Validate HTML and JavaScript files
+- Run security checks
+- Deploy to Netlify production
+
+### Other Deployment Options
+
+#### **Vercel**
+```bash
+# npm install -g vercel
+# vercel
+# Follow prompts to deploy
+```
+
+#### **GitHub Pages**
+1. Push to GitHub repository
+2. Go to Settings → Pages
+3. Select `main` branch as source
+4. Custom domain setup
 
 #### **2. Vercel**
 ```bash

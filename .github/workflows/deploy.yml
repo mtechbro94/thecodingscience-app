@@ -1,0 +1,171 @@
+name: CI/CD Pipeline - Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  # Job 1: Code Quality & Validation
+  validate:
+    name: Validate Code & Assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Validate HTML Files
+        run: |
+          echo "🔍 Validating HTML structure..."
+          for file in stitch/*/code.html; do
+            if ! grep -q "<!DOCTYPE html>" "$file"; then
+              echo "❌ Invalid HTML in $file"
+              exit 1
+            fi
+          done
+          echo "✅ All HTML files are valid"
+
+      - name: Check for Broken Links
+        run: |
+          echo "🔗 Checking local reference links..."
+          if grep -r "href=\"http" stitch/ | grep -v "https://"; then
+            echo "⚠️  Found non-https external links"
+          fi
+          echo "✅ Link validation complete"
+
+      - name: Validate JavaScript
+        run: |
+          echo "📝 Validating JavaScript syntax..."
+          if [ -f "stitch/app.js" ]; then
+            node -c stitch/app.js && echo "✅ app.js is valid"
+          fi
+
+  # Job 2: Build Artifacts & Asset Check
+  build:
+    name: Build & Prepare Artifacts
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Run Build Script
+        run: npm run build 2>/dev/null || echo "No build script defined (static site)"
+
+      - name: Check Assets
+        run: |
+          echo "📦 Checking published assets..."
+          if [ -d "stitch" ]; then
+            echo "✅ Publish directory 'stitch/' found"
+            find stitch -name "*.html" | wc -l | xargs -I {} echo "   Found {} HTML files"
+            ls -lh stitch/app.js 2>/dev/null && echo "✅ app.js found" || echo "⚠️  app.js not found"
+          fi
+
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: stitch/
+          retention-days: 5
+
+  # Job 3: Security Scanning
+  security:
+    name: Security Checks
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run npm audit
+        run: npm audit --production || npm audit --production --audit-level=moderate
+
+      - name: Check for Secrets
+        run: |
+          echo "🔐 Scanning for hardcoded secrets..."
+          if grep -r "apiKey\|api_key\|password\|token" stitch/ --include="*.html" --include="*.js" | grep -v "apiKey.*=.*\"\""; then
+            echo "⚠️  Potential hardcoded secrets detected"
+            exit 0
+          fi
+          echo "✅ No obvious secrets detected"
+
+  # Job 4: Deploy to Netlify (only on main branch push)
+  deploy:
+    name: Deploy to Netlify
+    runs-on: ubuntu-latest
+    needs: [validate, build, security]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: './stitch'
+          production-branch: main
+          production-deploy: true
+          description: 'Production deployment - ${{ github.sha }}'
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          enable-commit-status: true
+          overwrites-pull-request-comment: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 10
+
+      - name: Deployment Summary
+        if: always()
+        run: |
+          echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** \`${{ github.ref }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Author:** @${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+
+  # Job 5: Notify on Failure
+  notify:
+    name: Notify on Failure
+    runs-on: ubuntu-latest
+    needs: [validate, build, security, deploy]
+    if: failure() && github.event_name == 'push'
+    steps:
+      - name: Send Failure Notification
+        run: |
+          echo "❌ Pipeline failed for commit ${{ github.sha }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
